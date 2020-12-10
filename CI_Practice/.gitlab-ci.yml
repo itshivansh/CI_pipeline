@@ -2,7 +2,7 @@
 stages:
    - build
    - test
-   -publish
+   - publish
 build:
    stage: build
    script:
