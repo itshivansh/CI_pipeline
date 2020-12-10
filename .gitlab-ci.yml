@@ -1,4 +1,4 @@
-﻿image: mcr.microsoft.com/dotnet/core/sdk
+﻿image: mcr.microsoft.com/dotnet/sdk
 stages:
  - build
  - test
@@ -11,10 +11,10 @@ stages:
 test:
   stage: test
   script:
-   - 'dotnet test Test/UnitTest1.csproj'
+    - 'dotnet test Test/UnitTest1.csproj'
 publish:
   stage: publish
   script:
-   - 'dotnet publish CI_Practice/CI_Practice.csproj'
+    - 'dotnet publish CI_Practice/CI_Practice.csproj'
 
   
