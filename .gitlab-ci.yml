@@ -1,20 +1,18 @@
 ﻿image: mcr.microsoft.com/dotnet/sdk
 stages:
- - build
- - test
- - publish
- build:
-   stage: build
-   script:
+  - build
+  - test
+  - publish
+build:
+  stage: build
+  script:
     - 'dotnet restore'
     - 'dotnet build'
 test:
   stage: test
   script:
-    - 'dotnet test Test/UnitTest1.csproj'
+    - 'dotnet test UnitTest/UnitTest.csproj'
 publish:
   stage: publish
   script:
-    - 'dotnet publish CI_Practice/CI_Practice.csproj'
-
-  
+    - 'dotnet publish CustomerFramework/CustomerFramework.csproj'
