@@ -11,7 +11,7 @@ build:
 test:
   stage: test
   script:
-   - 'dotne test Test/UnitTest1.csproj'
+   - 'dotnet test Test/UnitTest1.csproj'
 publish:
   stage: publish
   script:
